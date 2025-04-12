@@ -13,7 +13,7 @@ export const tools: Tool[] = [
     title: "단축 URL 생성기",
     description: "긴 URL을 짧고 기억하기 쉬운 URL로 변환합니다.",
     icon: "🔗",
-    path: "/tools/url-shortener",
+    path: "/url-shortener",
     category: "utility",
   },
   {
@@ -21,7 +21,7 @@ export const tools: Tool[] = [
     title: "IP CIDR 범위 계산기",
     description: "CIDR 표기법을 IP 범위로 변환하고 계산합니다.",
     icon: "🌐",
-    path: "/tools/cidr-calculator",
+    path: "/cidr-calculator",
     category: "network",
   },
   {
@@ -29,7 +29,7 @@ export const tools: Tool[] = [
     title: "IP 주소 확인",
     description: "현재 IP 주소와 위치 정보를 확인합니다.",
     icon: "📍",
-    path: "/tools/ip-checker",
+    path: "/ip-checker",
     category: "network",
   },
   {
@@ -37,7 +37,7 @@ export const tools: Tool[] = [
     title: "JSON 포맷터",
     description: "JSON 데이터를 보기 좋게 포맷팅합니다.",
     icon: "📝",
-    path: "/tools/json-formatter",
+    path: "/json-formatter",
     category: "development",
   },
   {
@@ -45,7 +45,7 @@ export const tools: Tool[] = [
     title: "Base64 변환기",
     description: "텍스트와 Base64를 상호 변환합니다.",
     icon: "🔄",
-    path: "/tools/base64-converter",
+    path: "/base64-converter",
     category: "converter",
   },
   {
@@ -53,7 +53,7 @@ export const tools: Tool[] = [
     title: "색상 선택기",
     description: "색상 코드를 추출하고 변환합니다.",
     icon: "🎨",
-    path: "/tools/color-picker",
+    path: "/color-picker",
     category: "utility",
   },
   {
@@ -61,7 +61,7 @@ export const tools: Tool[] = [
     title: "비밀번호 생성기",
     description: "안전한 비밀번호를 생성합니다.",
     icon: "🔒",
-    path: "/tools/password-generator",
+    path: "/password-generator",
     category: "utility",
   },
   {
@@ -69,7 +69,7 @@ export const tools: Tool[] = [
     title: "정규식 테스터",
     description: "정규식을 테스트하고 디버깅합니다.",
     icon: "🔍",
-    path: "/tools/regex-tester",
+    path: "/regex-tester",
     category: "development",
   },
 ];
