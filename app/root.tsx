@@ -30,6 +30,37 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="유용한 개발자 도구 모음 - IP CIDR 계산기, 비밀번호 생성기, 이모지 선택기 등"
+        />
+        <meta
+          name="keywords"
+          content="개발자 도구, IP CIDR 계산기, 비밀번호 생성기, 이모지 선택기, 개발 유틸리티"
+        />
+        <meta name="author" content="Joseph Kim" />
+        <meta property="og:title" content="Dongle - 개발자 도구 모음" />
+        <meta
+          property="og:description"
+          content="유용한 개발자 도구 모음 - IP CIDR 계산기, 비밀번호 생성기, 이모지 선택기 등"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dongle-green.vercel.app" />
+        <meta
+          property="og:image"
+          content="https://dongle-green.vercel.app/og-image.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dongle - 개발자 도구 모음" />
+        <meta
+          name="twitter:description"
+          content="유용한 개발자 도구 모음 - IP CIDR 계산기, 비밀번호 생성기, 이모지 선택기 등"
+        />
+        <meta
+          name="twitter:image"
+          content="https://dongle-green.vercel.app/og-image.png"
+        />
+        <link rel="canonical" href="https://dongle-green.vercel.app" />
         <Meta />
         <Links />
         <script
@@ -74,6 +105,37 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="유용한 개발자 도구 모음 - IP CIDR 계산기, 비밀번호 생성기, 이모지 선택기 등"
+        />
+        <meta
+          name="keywords"
+          content="개발자 도구, IP CIDR 계산기, 비밀번호 생성기, 이모지 선택기, 개발 유틸리티"
+        />
+        <meta name="author" content="Joseph Kim" />
+        <meta property="og:title" content="Dongle - 개발자 도구 모음" />
+        <meta
+          property="og:description"
+          content="유용한 개발자 도구 모음 - IP CIDR 계산기, 비밀번호 생성기, 이모지 선택기 등"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://dongle-green.vercel.app" />
+        <meta
+          property="og:image"
+          content="https://dongle-green.vercel.app/og-image.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dongle - 개발자 도구 모음" />
+        <meta
+          name="twitter:description"
+          content="유용한 개발자 도구 모음 - IP CIDR 계산기, 비밀번호 생성기, 이모지 선택기 등"
+        />
+        <meta
+          name="twitter:image"
+          content="https://dongle-green.vercel.app/og-image.png"
+        />
+        <link rel="canonical" href="https://dongle-green.vercel.app" />
         <Meta />
         <Links />
         <script
