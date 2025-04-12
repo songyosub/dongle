@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Card } from "../components/ui/card";
 import { Icons } from "../components/icons";
+import { Slider } from "../components/ui/slider";
 
 interface PasswordOptions {
   length: number;
@@ -79,13 +80,13 @@ export function PasswordGenerator() {
             <label className="block text-sm font-medium mb-2">
               비밀번호 길이: {options.length}
             </label>
-            <input
-              type="range"
-              min="8"
-              max="32"
-              value={options.length}
-              onChange={(e) =>
-                setOptions({ ...options, length: parseInt(e.target.value) })
+            <Slider
+              min={8}
+              max={32}
+              step={1}
+              value={[options.length]}
+              onValueChange={(value) =>
+                setOptions({ ...options, length: value[0] })
               }
               className="w-full"
             />
