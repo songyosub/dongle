@@ -6,4 +6,5 @@ export default [
   route("/cidr-calculator", "routes/cidr-calculator.tsx"),
   route("/ip-checker", "routes/ip-checker.tsx"),
   route("/domain-ip-checker", "routes/domain-ip-checker.tsx"),
+  route("/password-generator", "routes/password-generator.tsx"),
 ] satisfies RouteConfig;
