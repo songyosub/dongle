@@ -33,6 +33,14 @@ export const tools: Tool[] = [
     category: "network",
   },
   {
+    id: "domain-ip-checker",
+    title: "도메인 IP 확인",
+    description: "도메인의 IP 주소와 관련 정보를 확인합니다.",
+    icon: "🔍",
+    path: "/domain-ip-checker",
+    category: "network",
+  },
+  {
     id: "json-formatter",
     title: "JSON 포맷터",
     description: "JSON 데이터를 보기 좋게 포맷팅합니다.",
