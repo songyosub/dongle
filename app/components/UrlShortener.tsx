@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export function UrlShortener() {
   const [url, setUrl] = useState("");
-  const [shortUrl, setShortUrl] = useState("");
+  const [shorturl, setshorturl] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -12,16 +12,18 @@ export function UrlShortener() {
     setIsLoading(true);
 
     try {
-      // TODO: 실제 API 연동 시 이 부분을 수정
-      // 임시로 랜덤 문자열 생성
-      const randomString = Math.random().toString(36).substring(2, 8);
-      const baseUrl = window.location.origin;
-      const generatedShortUrl = `${baseUrl}/s/${randomString}`;
+      const response = await fetch(
+        `https://is.gd/create.php?format=json&url=${encodeURIComponent(url)}`
+      );
+      const data = await response.json();
 
-      // 실제 API 호출을 시뮬레이션하기 위한 지연
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      setShortUrl(generatedShortUrl);
+      console.info(data);
+      console.info(data.shorturl);
+      if (data.shorturl) {
+        setshorturl(data.shorturl);
+      } else {
+        throw new Error("단축 URL 생성에 실패했습니다.");
+      }
     } catch (err) {
       setError("URL 단축 중 오류가 발생했습니다. 다시 시도해주세요.");
     } finally {
@@ -31,7 +33,7 @@ export function UrlShortener() {
 
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText(shortUrl);
+      await navigator.clipboard.writeText(shorturl);
       alert("클립보드에 복사되었습니다!");
     } catch (err) {
       setError("클립보드 복사 중 오류가 발생했습니다.");
@@ -76,7 +78,7 @@ export function UrlShortener() {
         </div>
       )}
 
-      {shortUrl && (
+      {shorturl && (
         <div className="mt-6 p-4 bg-gray-50 rounded-lg">
           <h2 className="text-sm font-medium text-gray-700 mb-2">
             생성된 단축 URL
@@ -84,7 +86,7 @@ export function UrlShortener() {
           <div className="flex items-center space-x-2">
             <input
               type="text"
-              value={shortUrl}
+              value={shorturl}
               readOnly
               className="flex-1 px-4 py-2 bg-white border border-gray-300 rounded-lg"
             />

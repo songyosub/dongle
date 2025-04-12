@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import dongleTools from "../welcome/dongle_tools.png";
+import dongleTools from "../dongle_tools.png";
 
 export function GNB() {
   const [searchQuery, setSearchQuery] = useState("");
