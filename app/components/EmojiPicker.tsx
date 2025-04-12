@@ -1,0 +1,90 @@
+import { useState, useMemo } from "react";
+import { Card } from "../components/ui/card";
+import { Icons } from "../components/icons";
+import { emojiCategories } from "../../lib/emoji-data";
+
+export function EmojiPicker() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState(
+    emojiCategories[0].id
+  );
+  const [selectedEmoji, setSelectedEmoji] = useState("");
+
+  const filteredEmojis = useMemo(() => {
+    if (!searchQuery) {
+      return (
+        emojiCategories.find((cat) => cat.id === selectedCategory)?.emojis || []
+      );
+    }
+
+    return emojiCategories.flatMap((cat) =>
+      cat.emojis.filter((emoji) => emoji.includes(searchQuery))
+    );
+  }, [searchQuery, selectedCategory]);
+
+  const copyToClipboard = (emoji: string) => {
+    navigator.clipboard.writeText(emoji);
+    setSelectedEmoji(emoji);
+    setTimeout(() => setSelectedEmoji(""), 1000);
+  };
+
+  return (
+    <Card className="p-6">
+      <div className="space-y-6">
+        <div className="flex items-center space-x-2">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="이모지 검색..."
+            className="flex-1 p-2 border rounded"
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery("")}
+              className="p-2 text-gray-500 hover:text-gray-700"
+            >
+              {Icons.X({ className: "h-5 w-5" })}
+            </button>
+          )}
+        </div>
+
+        <div className="flex space-x-2 overflow-x-auto pb-2">
+          {emojiCategories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`px-4 py-2 rounded ${
+                selectedCategory === category.id
+                  ? "bg-blue-500 text-white"
+                  : "bg-gray-100 hover:bg-gray-200"
+              }`}
+            >
+              {category.name}
+            </button>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-8 gap-2">
+          {filteredEmojis.map((emoji) => (
+            <button
+              key={emoji}
+              onClick={() => copyToClipboard(emoji)}
+              className={`p-2 text-2xl rounded hover:bg-gray-100 ${
+                selectedEmoji === emoji ? "bg-blue-100" : ""
+              }`}
+            >
+              {emoji}
+            </button>
+          ))}
+        </div>
+
+        {selectedEmoji && (
+          <div className="text-center text-sm text-gray-500">
+            이모지가 클립보드에 복사되었습니다!
+          </div>
+        )}
+      </div>
+    </Card>
+  );
+}

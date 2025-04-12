@@ -41,6 +41,14 @@ export const tools: Tool[] = [
     category: "network",
   },
   {
+    id: "emoji-picker",
+    title: "이모지 선택기",
+    description: "카테고리별로 이모지를 검색하고 선택합니다.",
+    icon: "😊",
+    path: "/emoji-picker",
+    category: "utility",
+  },
+  {
     id: "json-formatter",
     title: "JSON 포맷터",
     description: "JSON 데이터를 보기 좋게 포맷팅합니다.",

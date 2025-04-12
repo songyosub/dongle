@@ -7,4 +7,5 @@ export default [
   route("/ip-checker", "routes/ip-checker.tsx"),
   route("/domain-ip-checker", "routes/domain-ip-checker.tsx"),
   route("/password-generator", "routes/password-generator.tsx"),
+  route("/emoji-picker", "routes/emoji-picker.tsx"),
 ] satisfies RouteConfig;
