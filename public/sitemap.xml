@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dongle-green.vercel.app</loc>
+    <loc>https://dongle-tools.site</loc>
     <lastmod>2025-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://dongle-green.vercel.app/url-shortener</loc>
+    <loc>https://dongle-tools.site/url-shortener</loc>
     <lastmod>2025-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dongle-green.vercel.app/cidr-calculator</loc>
+    <loc>https://dongle-tools.site/cidr-calculator</loc>
     <lastmod>2025-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dongle-green.vercel.app/ip-checker</loc>
+    <loc>https://dongle-tools.site/ip-checker</loc>
     <lastmod>2025-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dongle-green.vercel.app/domain-ip-checker</loc>
+    <loc>https://dongle-tools.site/domain-ip-checker</loc>
     <lastmod>2025-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dongle-green.vercel.app/emoji-picker</loc>
+    <loc>https://dongle-tools.site/emoji-picker</loc>
     <lastmod>2025-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dongle-green.vercel.app/password-generator</loc>
+    <loc>https://dongle-tools.site/password-generator</loc>
     <lastmod>2025-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

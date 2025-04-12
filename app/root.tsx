@@ -45,10 +45,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
           content="유용한 개발자 도구 모음 - IP CIDR 계산기, 비밀번호 생성기, 이모지 선택기 등"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dongle-green.vercel.app" />
+        <meta property="og:url" content="https://dongle-tools.site" />
         <meta
           property="og:image"
-          content="https://dongle-green.vercel.app/og-image.png"
+          content="https://dongle-tools.site/og-image.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dongle - 개발자 도구 모음" />
@@ -58,9 +58,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         />
         <meta
           name="twitter:image"
-          content="https://dongle-green.vercel.app/og-image.png"
+          content="https://dongle-tools.site/og-image.png"
         />
-        <link rel="canonical" href="https://dongle-green.vercel.app" />
+        <link rel="canonical" href="https://dongle-tools.site" />
         <Meta />
         <Links />
         <script
@@ -120,10 +120,10 @@ export default function App() {
           content="유용한 개발자 도구 모음 - IP CIDR 계산기, 비밀번호 생성기, 이모지 선택기 등"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dongle-green.vercel.app" />
+        <meta property="og:url" content="https://dongle-tools.site" />
         <meta
           property="og:image"
-          content="https://dongle-green.vercel.app/og-image.png"
+          content="https://dongle-tools.site/og-image.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dongle - 개발자 도구 모음" />
@@ -133,9 +133,9 @@ export default function App() {
         />
         <meta
           name="twitter:image"
-          content="https://dongle-green.vercel.app/og-image.png"
+          content="https://dongle-tools.site/og-image.png"
         />
-        <link rel="canonical" href="https://dongle-green.vercel.app" />
+        <link rel="canonical" href="https://dongle-tools.site" />
         <Meta />
         <Links />
         <script
