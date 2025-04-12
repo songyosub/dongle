@@ -1,6 +1,7 @@
+import { Button } from "~/components/ui/button";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
-
+import dongleTools from "./dongle_tools.png";
 export function Welcome() {
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
@@ -8,14 +9,11 @@ export function Welcome() {
         <header className="flex flex-col items-center gap-9">
           <div className="w-[500px] max-w-[100vw] p-4">
             <img
-              src={logoLight}
+              src={dongleTools}
               alt="React Router"
-              className="block w-full dark:hidden"
-            />
-            <img
-              src={logoDark}
-              alt="React Router"
-              className="hidden w-full dark:block"
+              className="block w-full"
+              height={60}
+              width={180}
             />
           </div>
         </header>
