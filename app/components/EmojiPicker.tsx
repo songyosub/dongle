@@ -9,6 +9,7 @@ export function EmojiPicker() {
     emojiCategories[0].id
   );
   const [selectedEmoji, setSelectedEmoji] = useState("");
+  const [copiedEmojis, setCopiedEmojis] = useState<string[]>([]);
 
   const filteredEmojis = useMemo(() => {
     if (!searchQuery) {
@@ -25,7 +26,17 @@ export function EmojiPicker() {
   const copyToClipboard = (emoji: string) => {
     navigator.clipboard.writeText(emoji);
     setSelectedEmoji(emoji);
+    setCopiedEmojis((prev) => [...prev, emoji]);
     setTimeout(() => setSelectedEmoji(""), 1000);
+  };
+
+  const copyAllEmojis = () => {
+    const emojiText = copiedEmojis.join("");
+    navigator.clipboard.writeText(emojiText);
+  };
+
+  const resetEmojis = () => {
+    setCopiedEmojis([]);
   };
 
   return (
@@ -49,6 +60,35 @@ export function EmojiPicker() {
           )}
         </div>
 
+        {copiedEmojis.length > 0 && (
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-semibold">복사된 이모지</h3>
+              <div className="space-x-2">
+                <button
+                  onClick={copyAllEmojis}
+                  className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                >
+                  모두 복사
+                </button>
+                <button
+                  onClick={resetEmojis}
+                  className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+                >
+                  초기화
+                </button>
+              </div>
+            </div>
+            <div className="p-4 bg-gray-50 rounded min-h-[100px] flex flex-wrap gap-2">
+              {copiedEmojis.map((emoji, index) => (
+                <span key={index} className="text-2xl">
+                  {emoji}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="flex space-x-2 overflow-x-auto pb-2">
           {emojiCategories.map((category) => (
             <button
@@ -65,12 +105,12 @@ export function EmojiPicker() {
           ))}
         </div>
 
-        <div className="grid grid-cols-8 gap-2">
+        <div className="grid grid-cols-12 gap-3">
           {filteredEmojis.map((emoji) => (
             <button
               key={emoji}
               onClick={() => copyToClipboard(emoji)}
-              className={`p-2 text-2xl rounded hover:bg-gray-100 ${
+              className={`p-3 text-3xl rounded hover:bg-gray-100 ${
                 selectedEmoji === emoji ? "bg-blue-100" : ""
               }`}
             >
